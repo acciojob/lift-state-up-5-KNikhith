@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-export default function SignUp({isLoggedIn,handleLoggedIn}){
+export default function Login({isLoggedIn,onLogin}){
     let [userName,setUserName]=useState("");
     let [password,setPassword]=useState("");
     function handleSubmit(e){
         e.preventDefault();
-        handleLoggedIn();
+        onLogin();
     }
     if(isLoggedIn){
         return <div>You are logged in!</div>
